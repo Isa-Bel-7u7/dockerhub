@@ -1,0 +1,13 @@
+{
+  "name": "dockerhub-framework-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Página web servida con Express para la práctica de Docker y GitHub Actions.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

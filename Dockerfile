@@ -1,7 +1,16 @@
-FROM nginx:alpine
+FROM node:24-alpine
 
-COPY index.html /usr/share/nginx/html/index.html
+WORKDIR /app
 
-EXPOSE 80
+COPY package.json ./
+RUN npm install --omit=dev
 
-CMD ["nginx", "-g", "daemon off;"]
+COPY server.js index.html ./
+
+ENV NODE_ENV=production
+ENV PORT=3000
+
+USER node
+EXPOSE 3000
+
+CMD ["npm", "start"]
