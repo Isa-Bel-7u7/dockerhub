@@ -5,7 +5,7 @@ Aplicación web mínima creada con Express. Express atiende la ruta `/` y entreg
 ## Ejecutar localmente
 
 ```bash
-npm ci
+npm install
 npm start
 ```
 
